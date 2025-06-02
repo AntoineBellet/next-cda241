@@ -27,8 +27,8 @@ jobs:
           sleep 10
 
       - name: Run Cypress tests
-        run: npx cypress run
-        continue-on-error: true  # permet d'avoir les artifacts même si les tests échouent
+        run: e2e:headless
+        continue-on-error: true  
 
       - name: Upload Cypress videos
         if: always()
