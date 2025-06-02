@@ -32,14 +32,16 @@ jobs:
 
       - name: Upload Cypress videos
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
+
         with:
           name: cypress-videos
           path: cypress/videos
 
       - name: Upload Cypress screenshots (optionnel)
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
+
         with:
           name: cypress-screenshots
           path: cypress/screenshots
